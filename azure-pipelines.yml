@@ -29,3 +29,10 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
+          
+    # Publish the Kubernetes manifests folder as a build artifact
+    - task: PublishBuildArtifacts@1
+      inputs:
+        PathtoPublish: 'manifests'       # relative path in repo where your k8s manifests are
+        ArtifactName: 'manifests'        # name of artifact
+        publishLocation: 'Container'
