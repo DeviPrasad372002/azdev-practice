@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: deviprasadazdevpractice 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: deviprasadazdevpractice
+  template:
+    metadata:
+      labels:
+        app: deviprasadazdevpractice 
+    spec:
+      containers:
+        - name: deviprasadazdevpractice 
+          image: prasad3722.azurecr.io/deviprasadazdevpractice
+          ports:
+          - containerPort: 5000
