@@ -36,10 +36,10 @@ stages:
         dockerfile: $(dockerfilePath)
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
-          $(tag)
+              $(tag)
     - task: PublishBuildArtifacts@1
       inputs:
         pathToPublish: '$(System.DefaultWorkingDirectory)/manifests'
-        artifactName: 'manifests'
+        artifactName: 'DeviPrasad372002.azdev-practice' 
 
 
