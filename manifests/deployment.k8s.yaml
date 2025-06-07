@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: cicd
-        image: deviprasad3722/cicd:latest
+        image: prasad3722.azurecr.io/deviprasadazdevpractice:$(Build.BuildId)
         ports:
         - containerPort: 5000
