@@ -39,7 +39,8 @@ stages:
               $(tag)
     - task: PublishBuildArtifacts@1
       inputs:
-        pathToPublish: '$(System.DefaultWorkingDirectory)/manifests'
-        artifactName: 'DeviPrasad372002.azdev-practice' 
+        pathToPublish: '$(Build.SourcesDirectory)/manifests'
+        artifactName: 'DeviPrasad372002.azdev-practice'
+
 
 
