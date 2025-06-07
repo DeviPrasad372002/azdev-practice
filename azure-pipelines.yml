@@ -42,3 +42,4 @@ stages:
         pathToPublish: '$(System.DefaultWorkingDirectory)/manifests'
         artifactName: 'manifests'
 
+
