@@ -8,6 +8,7 @@ trigger:
 resources:
 - repo: self
 
+
 variables:
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: '95beb7fb-5f11-4479-9967-746210a0d30a'
@@ -36,4 +37,11 @@ stages:
         dockerfile: $(dockerfilePath)
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
-          $(tag)
+          $(tag)    
+    - task: PublishBuildArtifacts@1
+      displayName: Publish manifests
+      inputs:
+        PathtoPublish: '$(Build.SourcesDirectory)/manifests'
+        ArtifactName: 'manifests'
+        publishLocation: 'Container'
+
